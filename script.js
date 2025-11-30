@@ -8,18 +8,33 @@ function addTask() {
 
     const li = document.createElement("li");
 
+   
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "task-checkbox";
+
+    
     const span = document.createElement("span");
     span.className = "task";
     span.textContent = text;
-    span.onclick = () => li.classList.toggle("completed");
+
+    checkbox.onchange = () => {
+        li.classList.toggle("completed", checkbox.checked);
+    };
+
+    span.ondblclick = () => {
+        li.remove();
+    };
+
 
     const removeBtn = document.createElement("button");
     removeBtn.className = "remove-btn";
     removeBtn.textContent = "X";
     removeBtn.onclick = () => li.remove();
 
-    li.append(span, removeBtn);
+    li.append(checkbox, span, removeBtn);
     taskList.appendChild(li);
+
     input.value = "";
 }
 

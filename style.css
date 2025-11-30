@@ -30,20 +30,20 @@ h2 {
     flex: 1;
     padding: 10px;
     font-size: 15px;
-    border: 1px solid #046e52;
+    border: 1px solid #005eff;
     border-radius: 8px;
     outline: none;
     transition: .2s;
 }
 
 #taskInput:focus {
-    border-color: #026523;
-    box-shadow: 0 0 5px rgba(5, 181, 172, 0.4);
+    border-color: #021e65;
+    box-shadow: 0 0 5px rgba(5, 14, 181, 0.4);
 }
 
 #addBtn {
     padding: 10px 16px;
-    background: #028a56;
+    background: #02418a;
     color: white;
     border: none;
     cursor: pointer;
